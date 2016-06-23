@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt, english]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+
+
+
+
+\newtheorem{theo}{Theorem}[section]
+\newcommand{\R}{\mathbb{R}}
+
+\newtheorem{prop}[theo]{Proposition}
+
+
+\begin{document}
+
+
+Dear Myroslav,
+
+thank you for your message.  Here my comments:
+
+1- It seems that the manifold spanned by $(1,1,...,1)$ (the bisectrive) is a global attractor of the dynamics. Therefore the cut off function $\phi$ is useless. Is that it ?
+
+2- you forgot the derivarives in (1) and (2) (but it is a minor remarks);
+
+3- Personally i do not share the enthusiasm of Alfio (in CC) about these simulations. It seems to me that by adding this "negative" contribution we killed the exponential growth of the original model by Ertur and Koch and we reduced the model to a global consensus model (like a Krause model with global interactions). It seems that we killed the nature of the model. What do you think about it ?
+
+4 - Let us see the following chain of equalities in which I omitted $\phi$ (which is useless cutoff)
+$$
+\dot x_i = \prod_j x_j^{v_{ij}} (1 - \prod_j x_j^{w_{ij} - v_{ij}} )
+= \prod_j x_j^{v_{ij}} (1 - \exp(\sum_j (w_{ij} - v_{ij}) \log(x_j)) )
+$$
+Now if we are close to the consensus manifold $span(1,1,...,1)$ or by choosing exponents  $v_ij$ and $w_ij$ sufficiently close the one to the other the exponential approximate at the first order and we have
+$$
+\dot x_i \approx \prod_j x_j^{v_{ij}} (\sum_j (w_{ij} - v_{ij}) \log(x_j))
+$$
+What can we say of this system?
+
+5 -In order to preserve the nature of growth of the model perhaps we can study what happens if we do not assume the matrices $v_ij$ and $w_ij$ to be stochastics.
+
+
+Let me know your opinion,
+bests,
+
+Marco
+
+
+
+\end{document}

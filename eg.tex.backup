@@ -30,24 +30,24 @@ Consider the dynamical system
 \begin{equation}
 \label{s1}
 \D
-\dot{x_i} = x_i \phi(x_i)\left(\prod_{j=1}^{N} \left(\frac{x_j}{x_i}\right)^{v_{ij}} - \prod_{j=1}^{N}\left(\frac{x_j}{x_i}\right)^{w_{ij}} \right), \qquad i=1,\ldots, N,
+\dot{x_i} = x_i \left(\prod_{j=1}^{N} \left(\frac{x_j}{x_i}\right)^{v_{ij}} - \prod_{j=1}^{N}\left(\frac{x_j}{x_i}\right)^{w_{ij}} \right), \qquad i=1,\ldots, N,
 \end{equation}
 $$
-x_i(0) = x_{i0}, \quad \mbox{\---} \quad \mbox{initial conditions, }
+x_i(0) = x_{i0}, \quad \mbox{\---} \quad \mbox{initial conditions. }
 $$
-where $x$ \--- the state, $\phi(x) = \sqrt{x(x_{max}-x)}$. 
+
 
 In the case when $\mathbf{v} = \{v_{ij}\}_{i,j=1, \ldots, N}$ and $\mathbf{w} = \{w_{ij}\}_{i,j=1, \ldots, N}$ are stochastic matrices, meaning $\sum_{j=1}^{N}v_{ij} = \sum_{j=1}^{N}w_{ij} = 1$ the system (\ref{s1}) becomes
 \begin{equation}
 \label{s2}
 \D
-\dot{x_i}  = \phi(x_i)\left(\prod_{j=1}^{N} \left(x_j\right)^{v_{ij}} - \prod_{j=1}^{N}\left(x_j\right)^{w_{ij}} \right), \qquad i=1,\ldots, N.
+\dot{x_i}  = \prod_{j=1}^{N} \left(x_j\right)^{v_{ij}} - \prod_{j=1}^{N}\left(x_j\right)^{w_{ij}} , \qquad i=1,\ldots, N.
 \end{equation}
 The above dynamical system (\ref{s2}) has an equilibrium when
 \begin{equation}
 \label{s3}
 \D
- \phi(x_i)\left(\prod_{j=1}^{N} \left(x_j\right)^{v_{ij}} - \prod_{j=1}^{N}\left(x_j\right)^{w_{ij}} \right) = 0, \qquad i=1,\ldots, N.
+ \prod_{j=1}^{N} \left(x_j\right)^{v_{ij}} - \prod_{j=1}^{N}\left(x_j\right)^{w_{ij}}  = 0, \qquad i=1,\ldots, N.
 \end{equation}
 
 Taking the logarithm of (\ref{s3}) and denoting $y_i = \lg{x_i}$, $\Delta_{ij} = v_{ij} - w_{ij}$ the system (\ref{s3}) transforms to the following
@@ -65,7 +65,7 @@ Note that for a singular matrix $\mathbf{\Delta}$ there are infinitely many equi
 Let's find those equilibriums. Apart of  $x = (0, 0, \ldots, 0)$ and $x = (1, 1, \ldots, 1)$ (\ref{s3}) holds for $x_1 =  x_2 = \ldots = x_N$ because then (\ref{s3}) become
 $$
 \D
- \phi(x)\left(x^1 - x^1\right) = 0, \qquad i=1,\ldots, N.
+ x^1 - x^1 = 0, \qquad i=1,\ldots, N.
 $$
 where $x = x_i$, $\forall i=1,\ldots, N$.
 
@@ -87,36 +87,34 @@ v_{ij}x^{\sum_{k=1}^{N}v_{ik} - 1} - w_{ij}x^{\sum_{k=1}^{N}w_{ik} - 1} = v_{ij}
 $$
 therefore,  $\Delta f(x) = \mathbf{\Delta}$ for all $x\in U_e$.
 
-Note that the matrix $\mathbf{\Delta}$ always has a zero eignvalue, because the $|\mathbf{\Delta}| = 0$. This implies that 
+Note that the matrix $\mathbf{\Delta}$ always has a zero eignvalue, because the $|\mathbf{\Delta}| = 0$. This implies that the equilibriums $x\in U_e$ can not be asymptotically stable.
 
 \newpage
 \section{Numerical observations}
 \subsection{Example 1}
 
 
-Consider the case $N=3$, the time horizon $T = 100$, $x_{max} = 1$,
-$$
-\mathbf{v} = 
-\left(
-\begin{matrix}
-0 & 0.5 & 0.5 \\
-0.5 & 0 & 0.5 \\
-0.5 & 0.5 & 0 \\
-\end{matrix}
-\right),
-$$
+Consider the case $N=3$, the time horizon $T = 100$,
 
-$$
-\mathbf{w} = 
-\left(
-\begin{matrix}
-0.5 & 0.5 & 0 \\
+
+\[\mathbf{v} =  \left( \begin{array}{ccc}
 0 & 0.5 & 0.5 \\
 0.5 & 0 & 0.5 \\
-\end{matrix}
-\right).
-$$
-Here $\mathbf{v}$ and $\mathbf{w}$ are stochastic, then $|\mathbf{\Delta}| = 0$. Therefore the problem has more than one equilibrium. 
+0.5 & 0.5 & 0 
+\end{array} \right),
+%
+\mathbf{w} = 
+\left( \begin{array}{ccc}
+0.5 & 0.5 & 0 \\
+0 & 0.5 & 0.5 \\
+0.5 & 0 & 0.5 
+\end{array} \right),
+\]
+
+
+%Here $\mathbf{v}$ and $\mathbf{w}$ are stochastic, then $|\mathbf{\Delta}| = 0$. Therefore the problem has more than one equilibrium. 
+The real parts of egenvalues of $\mathbf{\Delta}$ are less or equa zero, namely $Re\lambda_1 = -0.75$,  $Re\lambda_2 = -0.75$, and $Re\lambda_3 = 0$ therefore, the equilibriums 
+$U_e$ are stable.
 Let us have a look at the graph of the solution with the initial conditions $x_0 = (0.3\quad 0.6\quad 0.9)$.
 
 \begin{figure}[ht]
@@ -126,14 +124,14 @@ Let us have a look at the graph of the solution with the initial conditions $x_0
 \caption{$x_0 = (0.3 \quad0.6\quad 0.9)$, $x^e = 0.6184178227652$}.
 \end{figure}
 
-The equilibrium in this case is from the space $U_e\ni x^e = 0.6184178227652$.
+The equilibrium  $U_e\ni x^e = 0.6184178227652$.
 
 
 
 
 \newpage
 If we change the initial conditions slightly the equilibrium point also changes. For example for the initial conditions
-$x_0 = (0.35\quad 0.6\quad 0.9)$ the solutions converge to a different  equilibrium $x^e = 0.635643409191$
+$x_0 = (0.35\quad 0.6\quad 0.9)$ the solutions converge to a different  equilibrium $U_e\ni x^e = 0.635643409191$
 \begin{figure}[ht]
 \label{fig_c2}
 \centering
@@ -146,7 +144,69 @@ In (Fig. 2) the two solutions are plotted together for comparison.
 
 \newpage
 
+
 \subsection{Example 2}
+In case  $\mathbf{\Delta}$ has positive eigenvalues the equilibriums  $U_e$ are not stable and the solutions diverge. Consider for example $N=3$, $T=100$ and the following matrices
+
+\[\mathbf{v} =  \left( \begin{array}{ccc}
+ 1/2& 0& 1/2\\ 
+ 1/2 &1/2 &0\\
+ 0& 1/2& 1/2\\
+\end{array} \right),
+%
+\mathbf{w} = 
+\left( \begin{array}{ccc}
+1/2& 1/2& 0\\ 
+1/2 &0 &1/2\\ 
+1/2& 0& 1/2\\
+\end{array} \right),
+\]
+
+The real parts of egenvalues of $\mathbf{\Delta}$ are  $Re\lambda_1 = 0.25$,  $Re\lambda_2 = 0.25$, and $Re\lambda_3 = 0$ therefore, the equilibriums 
+$U_e$ are not stable. The solutions for the initial condition $x_0 = (0.3\quad 0.6\quad 0.9)$ can be seen on the figure below. 
+\begin{figure}[ht]
+\label{fig_osc}
+\centering
+\includegraphics[scale= 0.4]{explode.jpg}
+\caption{Solutions diverge}
+\end{figure}
+
+\subsection{Example 3}
+In case all the real parts of eigenvalues of $\mathbf{\Delta}$ are zeros the solution exibits oscilatory behaviour. For $N=3$, $T=100$ and the matrices
+$$
+\mathbf{v} = 
+\left(
+\begin{matrix}
+ 1/2 &0& 1/2\\
+ 1/2 &1/2 &0\\
+ 0 &1/2 &1/2\\
+\end{matrix}
+\right),
+$$
+
+$$
+\mathbf{w} = 
+\left(
+\begin{matrix}
+1/2& 1/2& 0\\ 
+0 &1/2 &1/2\\
+1/2 &0 &1/2\\
+\end{matrix}
+\right).
+$$
+
+The solutions remain bounded within some corridor and oscilate infinitely.The solutions for the initial condition $x_0 = (0.3\quad 0.6\quad 0.9)$ can be seen on the figure below. 
+
+\begin{figure}[ht]
+\label{fig_osc}
+\centering
+\includegraphics[scale= 0.4]{osc.jpg}
+\caption{Oscilatory behavior}
+\end{figure}
+
+
+
+\subsection{Example 4}
 To picture how the equilibrium space looks like, consider a two dimensional case  $N=2$, and let us plot the phase portrait of the system (\ref{s2}), for the time horizon $T = 10$, $x_{max} = 1$. and
 $$
 \mathbf{v} = 
@@ -195,33 +255,6 @@ The trajectory portrait in the $3-dim$ case in the first example is pictured on 
 \end{figure}
 
 As can be seen all trajectories converge to the bisectrice of the first cuboid.
-\subsection{Example 3}
-The matrices $\mathbf{v}$ and $\mathbf{w}$ can also depend on time. Consider the case $N=3$, the time horizon $T = 300$, $x_{max} = 1$,
-
-
-
-$$
-\mathbf{v} = 
- \lambda(t)\left(
- \begin{array}{ccc}
-0 & 0.5 & 0.5 \\
-0.5 & 0 & 0.5 \\
-0.5 & 0.5 & 0 \\
-\end{array} 
-\right) 
-+ (1-\lambda(t))
-\left( 
-\begin{array}{ccc}
-0.5 & 0.5 & 0 \\
-0 & 0.5 & 0.5 \\
-0.5 & 0 & 0.5 \\
-\end{array} 
-\right)
-$$
-
-
-Here $\mathbf{v}$ and $\mathbf{w}$ are stochastic, then $|\mathbf{\Delta}| = 0$. Therefore the problem has more than one equilibrium. 
-Let us have a look at the graph of the solution with the initial conditions $x_0 = (0.3\quad 0.6\quad 0.9)$.
 
 
 

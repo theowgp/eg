@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2014.6.4)  23 JUN 2016 14:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2014.6.4)  23 JUN 2016 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -141,6 +141,9 @@ LaTeX Warning: Unused global option(s):
 
 (./eg.aux
 
+LaTeX Warning: Label `fig_osc' multiply defined.
+
+
 LaTeX Warning: Label `fig_c4' multiply defined.
 
 )
@@ -234,42 +237,60 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pt x 421.575pt>
 File: 1.jpg Graphic file (type jpg)
  <use 1.jpg>
-Package pdftex.def Info: 1.jpg used on input line 125.
+Package pdftex.def Info: 1.jpg used on input line 134.
 (pdftex.def)             Requested size: 224.83601pt x 168.627pt.
 
 [3 <./1.jpg>] <2.jpg, id=26, 562.1pt x 421.575pt>
 File: 2.jpg Graphic file (type jpg)
  <use 2.jpg>
-Package pdftex.def Info: 2.jpg used on input line 140.
+Package pdftex.def Info: 2.jpg used on input line 149.
 (pdftex.def)             Requested size: 224.83601pt x 168.627pt.
  [4 <./2.jpg>]
-<3.jpg, id=30, 562.1pt x 421.575pt>
-File: 3.jpg Graphic file (type jpg)
- <use 3.jpg>
-Package pdftex.def Info: 3.jpg used on input line 174.
+<explode.jpg, id=30, 562.1pt x 421.575pt>
+File: explode.jpg Graphic file (type jpg)
+ <use explode.jpg>
+Package pdftex.def Info: explode.jpg used on input line 193.
 (pdftex.def)             Requested size: 224.83601pt x 168.627pt.
 
-<4.jpg, id=31, 562.1pt x 421.575pt>
+Overfull \hbox (3.38951pt too wide) in paragraph at lines 226--227
+[]\OT1/cmr/m/n/10 The so-lu-tions re-main bounded within some cor-ri-dor and os
+-cilate in-finitely.The
+ []
+
+<osc.jpg, id=31, 562.1pt x 421.575pt>
+File: osc.jpg Graphic file (type jpg)
+ <use osc.jpg>
+Package pdftex.def Info: osc.jpg used on input line 231.
+(pdftex.def)             Requested size: 224.83601pt x 168.627pt.
+ [5 <./explode.jpg>]
+<3.jpg, id=35, 562.1pt x 421.575pt>
+File: 3.jpg Graphic file (type jpg)
+ <use 3.jpg>
+Package pdftex.def Info: 3.jpg used on input line 269.
+(pdftex.def)             Requested size: 224.83601pt x 168.627pt.
+
+<4.jpg, id=36, 562.1pt x 421.575pt>
 File: 4.jpg Graphic file (type jpg)
  <use 4.jpg>
-Package pdftex.def Info: 4.jpg used on input line 183.
+Package pdftex.def Info: 4.jpg used on input line 278.
 (pdftex.def)             Requested size: 224.83601pt x 168.627pt.
- [5 <./3.jpg> <./4.jpg>]
-<5.jpg, id=35, 556.0775pt x 418.56375pt>
+ [6 <./osc.jpg> <./3.jpg>]
+<5.jpg, id=40, 556.0775pt x 418.56375pt>
 File: 5.jpg Graphic file (type jpg)
  <use 5.jpg>
-Package pdftex.def Info: 5.jpg used on input line 193.
+Package pdftex.def Info: 5.jpg used on input line 288.
 (pdftex.def)             Requested size: 222.42705pt x 167.42252pt.
- [6 <./5.jpg>] (./eg.aux)
+ [7 <./4.jpg> <./5.jpg>]
+(./eg.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2670 strings out of 493315
- 34825 string characters out of 6145894
- 99295 words of memory out of 5000000
- 6093 multiletter control sequences out of 15000+600000
+ 2681 strings out of 493315
+ 34962 string characters out of 6145894
+ 99305 words of memory out of 5000000
+ 6102 multiletter control sequences out of 15000+600000
  7476 words of font info for 29 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,7n,26p,248b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -283,10 +304,10 @@ mr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/
 texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cms
 y7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on eg.pdf (6 pages, 259083 bytes).
+Output written on eg.pdf (7 pages, 321377 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

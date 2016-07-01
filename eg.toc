@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Some facts about the system}{2}
+\contentsline {section}{\numberline {2}Numerical observations}{4}
+\contentsline {subsection}{\numberline {2.1}Example 1. Converging pattern}{4}
+\contentsline {subsection}{\numberline {2.2}Example 2. Diverging pattern and the cutoff}{6}
+\contentsline {subsection}{\numberline {2.3}Example 3. Oscilating pattern}{7}
+\contentsline {subsection}{\numberline {2.4}Example 4. Diverging-converging pattern}{8}
+\contentsline {subsection}{\numberline {2.5}Example 5. Equilibrium space visualization}{9}
